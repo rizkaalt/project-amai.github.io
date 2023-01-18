@@ -17,7 +17,7 @@ fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
     const sideDataDiv = document.createElement('div');  
     sideDataDiv.innerHTML = ` 
 <img height="380" width="260" src = "${anime.image}"> </img> <br>
-<a href="https://kiriyako.github.io/amai/anime?id=${anime.id}"> <h2>${anime.title}</h2> </a>
+<a href="/anime?id=${anime.id}"> <h2>${anime.title}</h2> </a>
 <h3>Other Names: ${anime.otherName}</h3>
 <h3>Status: ${anime.status}</h3>
 <h3>Premiered: ${anime.releaseDate}</h3>
@@ -36,7 +36,7 @@ fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
   let html = " ";
   
   data.episodes.forEach(episode => {
-    html += `<a href="https://kiriyako.github.io/amai/watch?id=${id}&ep=${episode.id}&no=${episode.number}"> <text class="iepisode"> ${episode.number} </a> </text>`;
+    html += `<a href="/watch?id=${id}&ep=${episode.id}&no=${episode.number}"> <text class="iepisode"> ${episode.number} </a> </text>`;
   
   });
   
@@ -96,7 +96,7 @@ const debouncedInput = debounce(function(event) {
         li.innerText = result.title;
 
         li.addEventListener("click", function(event) {
-          window.location.href = `https://kiriyako.github.io/amai/anime?id=${result.id}`;
+          window.location.href = `/anime?id=${result.id}`;
         });
 
         autocompleteResults.appendChild(li);

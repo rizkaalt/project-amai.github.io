@@ -15,7 +15,7 @@ fetch('https://api.consumet.org/anime/gogoanime/top-airing')
             var shortTitle = title.substring(0, 50);
             if (title.length > 50)
                 shortTitle += "...";
-            animeDiv.innerHTML = `<img height="350" width="250" src="${anime.image}" alt="${anime.title}"> <a href="https://kiriyako.github.io/amai/anime?id=${anime.id}"> <h2>${shortTitle}</h2> </a> `;
+            animeDiv.innerHTML = `<img height="350" width="250" src="${anime.image}" alt="${anime.title}"> <a href="/anime?id=${anime.id}"> <h2>${shortTitle}</h2> </a> `;
             cardDiv.appendChild(animeDiv);
 });
 })
@@ -64,7 +64,7 @@ const debouncedInput = debounce(function (event) {
                 li.innerText = result.title;
 
                 li.addEventListener("click", function (event) {
-                    window.location.href = `https://kiriyako.github.io/amai/anime?id=${result.id}`;
+                    window.location.href = `/anime?id=${result.id}`;
                 });
 
                 autocompleteResults.appendChild(li);
