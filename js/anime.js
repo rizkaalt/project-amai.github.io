@@ -82,7 +82,7 @@ const debouncedInput = debounce(function (event) {
                 li.innerText = result.title;
 
                 li.addEventListener("click", function (event) {
-                    window.location.href = `/amai/anime?id=${result.id}`;
+          window.location.href = `/anime?id=${result.id}`;
                 });
 
                 autocompleteResults.appendChild(li);
