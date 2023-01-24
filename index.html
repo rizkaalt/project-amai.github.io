@@ -33,9 +33,44 @@
     a:hover {
         color: white;
     }
+    .header {
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    position: relative;
+    height: 50px;
+    }
+
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    background: none;
+}
 </style>
 
 <body>
+  <div class="header">
+    <p>Because gogohd pro has been banned, episodes might not be available to watch in India. We're sorry for the trouble.</p>
+    <button class="close-btn">X</button>
+  </div>
+<script>
+const header = document.querySelector('.header');
+const closeBtn = document.querySelector('.close-btn');
+
+// Check if the header has been closed before
+const headerClosed = localStorage.getItem('headerClosed');
+if (headerClosed === 'true') {
+  header.style.display = 'none';
+}
+
+closeBtn.addEventListener('click', function() {
+  header.style.display = 'none';
+  localStorage.setItem('headerClosed', 'true');
+});
+</script>
     <div id="navbar">
         <div class="logo">
             <a href="/"> <img class="imglogo" style="border-radius: 0px;" src="img/logo.png" alt="amai" width="130">
