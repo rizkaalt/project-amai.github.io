@@ -123,3 +123,8 @@ body {
 .navbar-class {
     margin-bottom: 20px;
 }
+
+
+#footerr a:hover {
+    color: white;
+}
