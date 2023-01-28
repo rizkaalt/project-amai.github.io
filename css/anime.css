@@ -24,9 +24,14 @@ display: flex;
 align-items: flex-end;
 width: 100%;
 }
-svg {
-vertical-align: middle;
+#yes svg {
+    vertical-align: middle;
 }
+
+#yes1 svg {
+    vertical-align: middle;
+}
+
 #yes {
 display: inline-block;
 border-radius: 20px;

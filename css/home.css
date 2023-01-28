@@ -153,3 +153,20 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
+
+button{
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 46px;
+  width: 46px;
+  outline: none;
+  background: #7c7c7c2b;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover{
+  background: #7c7c7c7b
+}

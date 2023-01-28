@@ -26,7 +26,11 @@ body {
     width: 100%;
 }
 
-svg {
+#yes svg {
+    vertical-align: middle;
+}
+
+#yes1 svg {
     vertical-align: middle;
 }
 
