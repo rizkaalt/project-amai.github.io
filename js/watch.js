@@ -50,7 +50,7 @@ fetch('https://api.consumet.org/anime/gogoanime/info/'+ id)
     
     const episodewatchDiv = document.getElementById('episodewatch');
     const refererDiv = document.createElement('div');
-    refererDiv.innerHTML = `<h2> Watching ${anime.title} Episode ${no}.</h2>  <iframe scrolling="no" frameBorder="0" allowfullscreen = "true" height="580" width="1000" src="${data.headers.Referer}" </iframe> <p></p>`
+    refererDiv.innerHTML = `<h2> Watching ${anime.title} Episode ${no}</h2>  <iframe scrolling="no" frameBorder="0" allowfullscreen = "true" height="580" width="1000" src="${data.headers.Referer}" </iframe> <p></p>`
 
     episodewatchDiv.appendChild(refererDiv);
 
