@@ -8,7 +8,7 @@ var id = url.searchParams.get("id");
 const errorContainer = document.createElement("div");
 errorContainer.style.color = "red";
 
-fetch('https://api.consumet.org/anime/gogoanime/info/' + id)
+fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/info/' + id)
     .then(response => response.json())
     .then(data => {
         const anime = data;
@@ -74,7 +74,7 @@ const debouncedInput = debounce(function (event) {
 
     const query = document.querySelector("#query").value;
 
-    fetch('https://api.consumet.org/anime/gogoanime/' + query)
+    fetch('https://rizka-english-anime-api.vercel.app/anime/zoro' + query)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 4).forEach(result => {
