@@ -74,7 +74,7 @@ const debouncedInput = debounce(function (event) {
 
     const query = document.querySelector("#query").value;
 
-    fetch('https://rizka-english-anime-api.vercel.app/anime/zoro' + query)
+    fetch('https://rizka-english-anime-api.vercel.app/anime/zoro/' + query)
         .then(response => response.json())
         .then(data => {
             data.results.slice(0, 4).forEach(result => {
